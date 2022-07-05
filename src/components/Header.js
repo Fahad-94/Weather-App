@@ -4,7 +4,7 @@ function Header(props) {
 
     return (
         <header>
-            <button className="headerBtn" id="btnCurrent" onClick={props.currentPosition}>Disply my weather</button>
+            <button className="headerBtn" id="btnCurrent" onClick={props.currentPosition}>Display my weather</button>
 
             <div id="dropdown">
                 <button className="headerBtn" id="dropdownBtn">Choose a city</button>

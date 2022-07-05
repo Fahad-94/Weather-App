@@ -9,7 +9,7 @@ import React, {useState} from 'react';
 
 function App() {
 
-  const [location, setLocation] = React.useState(coords[0]);
+  const [location, setLocation] = useState(coords[0]);
 
   function updateLocation(id) {
       let newLoc;

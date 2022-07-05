@@ -1,10 +1,13 @@
-import axios from 'axios';
 import React, {useState, useEffect} from 'react';
+require('dotenv').config();
 
 
 export default function Main(props) {
 
-    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${props.lat}&lon=${props.lon}&appid=80879ab40ffedf0e563fb2fe7c692f5a`;
+
+    let apiKey = process.env.REACT_APP_API_KEY;
+
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${props.lat}&lon=${props.lon}&appid=${apiKey}`;
 
     const [res, setRes] = useState({
         
@@ -77,8 +80,6 @@ export default function Main(props) {
     setCurrentTempK(prev=>!prev);
    }
 
-
-   console.log(res)
 
 
    let icon = res.weather[0].icon;
