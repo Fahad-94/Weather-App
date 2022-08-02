@@ -65,7 +65,7 @@ export default function Main(props) {
           .then(response => response.json())
           .then(data => setRes(data))
         
-    }, [props.loc])
+    }, [api])
 
 
 
